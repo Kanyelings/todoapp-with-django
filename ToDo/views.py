@@ -24,6 +24,11 @@ def update(request, todo_id):
     return HttpResponseRedirect(reverse("ToDo:index"))
 
 @csrf_exempt
+def updateredirect(request, todo_id):
+    task = Todo.objects.get(todo_id=todo_id)
+    return render(request, 'ToDo/update.html', {'task': task, 'todo_id': todo_id})
+
+@csrf_exempt
 def delete(request, todo_id):
     Todo.objects.filter(todo_id=todo_id).delete()
     return HttpResponseRedirect(reverse("ToDo:index"))

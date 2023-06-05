@@ -1,0 +1,13 @@
+{% extends 'ToDo/base.html' %}
+
+{% block body %}
+<div class="row mt-4">
+    <div class="col">
+        <h2>Update Task: '{{ task.title }}'</h2>
+        <form class="form-inline" action="{% url 'ToDo:update' todo_id %}" method="post">
+            <input type="text" name="task" class="form-control mb-2 mr-sm-2" placeholder="Type the task here..">
+            <button type="submit" class="btn btn-primary mb-2">Update</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
