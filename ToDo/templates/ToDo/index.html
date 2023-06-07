@@ -5,7 +5,7 @@
     <div class="col">
         <h2>Add Task</h2>
         <form class="form-inline" action="{% url 'ToDo:add' %}" method="post">
-            <input type="text" name="task" class="form-control mb-2 mr-sm-2" placeholder="Type the task here..">
+            <input type="text" name="task" class="form-control mb-2 mr-sm-2" placeholder="Type the task here.." required>
             <button type="submit" class="btn btn-primary mb-2">Submit </button>
         </form>
     </div>
