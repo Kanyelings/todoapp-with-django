@@ -18,7 +18,7 @@
 <div class="row mt-5">
     <div class="col">
         <ul class="list-group">
-            {% for todo_item in todo_items %}
+            {% for todo_item in  todo_items %}
                 <li class="list-group-item">{{ todo_item.title }}
                     <div class="float-end"> 
                         <form action="{% url 'ToDo:updateredirect' todo_item.todo_id %}" method="post">
