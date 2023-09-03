@@ -2,3 +2,4 @@ myEnv/
 *__pycache__*
 ToDo/migrations/
 .env
+.idea/
